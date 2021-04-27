@@ -17,7 +17,9 @@
     "paths": {
       "@nx-apollo-angular-nest/api-interfaces": [
         "libs/api-interfaces/src/index.ts"
-      ]
+      ],
+      "@nx-apollo-angular-nest/data-access": ["libs/data-access/src/index.ts"],
+      "@nx-apollo-angular-nest/feature-sets": ["libs/feature-sets/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

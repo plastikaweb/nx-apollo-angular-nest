@@ -209,6 +209,66 @@
           }
         }
       }
+    },
+    "data-access": {
+      "projectType": "library",
+      "root": "libs/data-access",
+      "sourceRoot": "libs/data-access/src",
+      "prefix": "nx-apollo-angular-nest",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/data-access/src/**/*.ts",
+              "libs/data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/data-access"],
+          "options": {
+            "jestConfig": "libs/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "generate": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "npx graphql-codegen --config libs/data-access/codegen.yml"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "feature-sets": {
+      "projectType": "library",
+      "root": "libs/feature-sets",
+      "sourceRoot": "libs/feature-sets/src",
+      "prefix": "nx-apollo-angular-nest",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/feature-sets/src/**/*.ts",
+              "libs/feature-sets/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/feature-sets"],
+          "options": {
+            "jestConfig": "libs/feature-sets/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

@@ -1,36 +1,22 @@
 {
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     ".eslintrc.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "npmScope": "nx-apollo-angular-nest",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
   "projects": {
-    "nx-apollo": {
-      "tags": []
-    },
-    "nx-apollo-e2e": {
-      "tags": [],
-      "implicitDependencies": ["nx-apollo"]
-    },
-    "api": {
-      "tags": []
-    },
-    "api-interfaces": {
-      "tags": []
-    }
+    "nx-apollo": { "tags": [] },
+    "nx-apollo-e2e": { "tags": [], "implicitDependencies": ["nx-apollo"] },
+    "api": { "tags": [] },
+    "api-interfaces": { "tags": [] },
+    "data-access": { "tags": [] },
+    "feature-sets": { "tags": [] }
   }
 }
